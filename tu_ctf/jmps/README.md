@@ -3,7 +3,6 @@ The program prints the name and specifies if the number was odd or even.
 
 If we generate the pseudocode for the program in IDA, we get :
 
-```
 	int __cdecl main(int argc, const char **argv, const char **envp)
 	{
 	  int v4; // [sp+10h] [bp-20h]@1
@@ -26,7 +25,6 @@ If we generate the pseudocode for the program in IDA, we get :
 	  }
 	  return 0;
 	}
-```
 
 Since the name is retrieved with scanf, we can easily write shellcode in the buffer,
 overflow the buffer and overwrite the return address in memory after the buffer to

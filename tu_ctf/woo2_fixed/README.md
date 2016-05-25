@@ -3,18 +3,18 @@ The main difference is in the pwnMe function :
 
 In woo2, we have :
 
-void __noreturn pwnMe()
-{
-  __int64 v0; // [sp+0h] [bp-10h]@1
+	void __noreturn pwnMe()
+	{
+	  __int64 v0; // [sp+0h] [bp-10h]@1
 
-  ++ if ( bearOffset != -1 )
-  ++ {
-	  v0 = (__int64)*(&pointers + bearOffset);
-	  if ( *(_DWORD *)(v0 + 20) == 3 )
-	    (*(void (**)(void))v0)();
-  ++ }
-  exit(0);
-}
+	  ++ if ( bearOffset != -1 )
+	  ++ {
+		  v0 = (__int64)*(&pointers + bearOffset);
+		  if ( *(_DWORD *)(v0 + 20) == 3 )
+		    (*(void (**)(void))v0)();
+	  ++ }
+	  exit(0);
+	}
 
 So in this challenge, we need to create a bear to be able to call our function.
 

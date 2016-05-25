@@ -119,6 +119,7 @@ If we don't create any bear, v0 will point at the buffer at the first address in
 
 
 Now let's look at makeTiger : 
+
 	__int64 makeTiger()
 	{
 	  void *v0; // ST08_8@1

